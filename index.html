@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nirman English Classes | YouTube Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .logo-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo-link:hover h1 {
+    color: #3ddfff;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #9accfe;
+            color: #080808;
+        }
+
+        header {
+            background: #007bff;
+            color: #57f2c3;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        nav {
+            background: #0d6efd;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 8px 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+            color: #0d6efd;
+        }
+
+        /* YouTube Videos */
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        /* Notes Section */
+        .notes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .note-card {
+            background: #00ffea;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .note-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .subscribe-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subscribe-btn {
+    display: inline-block;
+    background: #ff0000;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+#splash {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #00fff7, #0490f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: splashFade 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.splash-content {
+    text-align: center;
+    color: #000000;
+    animation: zoomIn 1.5s ease;
+}
+
+.glow-text {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(255, 247, 0, 0.6);
+}
+
+.typing {
+    margin-top: 12px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-right: 2px solid #00ffe5;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(20) forwards;
+}
+
+.loader {
+    width: 260px;
+    height: 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    margin: 30px auto 15px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #22c55e, #4ade80);
+    animation: load 1s ease forwards;
+}
+
+.tagline {
+    font-size: 14px;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes typing {
+    to { width: 400px; }
+}
+
+@keyframes load {
+    to { width: 100%; }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes splashFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+        .note-card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff;
+            background: #0d6efd;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        /* About */
+        .about {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+
+        /* Advertisement */
+        .ad {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px;
+        }
+
+        .ad h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .ad p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .ad button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: #fff;
+            color: #0d6efd;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .ad button:hover {
+            background: #ddd;
+        }
+
+        footer {
+            background: #1e2a38;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+   <header class="site-header">
+    <a href="index.html" class="logo-link">
+        <div class="logo-box">
+            <img src="LOGO.jpeg"height="80" alt="Nirwan English Class Logo">
+            <div class="title-text">
+                <h1>Nirwan English Class</h1>
+                <b>A plateform where you can trust</b>
+            </div>
+        </div>
+    </a>
+</header>
+</header>
+
+<nav>
+    <a href="#videos">Videos</a>
+    <a href="#notes">Notes</a>
+    <a href="#about">About</a>
+    <a href="#join">Join Us</a>
+</nav>
+
+
+
+<!-- Notes Section -->
+<section id="notesPopup">
+    <h2 class="section-title">📘 Study Notes</h2>
+    <div class="notes">
+        <div class="note-card">
+            <h3>English Grammar Notes</h3>
+            <p>Tense, Voice, Narration & more.</p>
+            <a href="eng notes.html">OPEN</a>
+        </div>
+        <div class="note-card">
+            <h3>Vocabulary PDF</h3>
+            <p>Important words for exams.</p>
+            <a href="vocab.html">OPEN</a>
+        </div>
+        <div class="note-card">
+            <h3>Practice Worksheets</h3>
+            <p>Daily English practice sheets.</p>
+            <a href="#">OPEN</a>
+        </div>
+        <div class="note-card">
+            <h3>SSC(CGL|CHSL)</h3>
+            <p>IMPORTANT NOTES.</p>
+            <a href="#">OPEN</a>
+        </div>
+    
+    </div>
+</section>
+
+<!-- YouTube Videos -->
+<section id="videos">
+    <h2 class="section-title">📺 Our YouTube Videos</h2>
+    <div class="video-container">
+        <!-- Replace video IDs with your own -->
+        <a href="https://youtu.be/Vs7cZwcagwI"><img src="WhatsApp Image 2025-12-24 at 12.10.38 PM.jpeg"height="180"></a>
+        <A href="https://youtu.be/k-S04sbDmGY?list=PLMHH4QRsXRk-ix8iPVxgWui-6syE9DdL6"><img src="WhatsApp Image 2025-12-24 at 12.10.38 PM.jpeg"height="180"></A>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2 class="section-title">🏫 About Our Coaching Institute</h2>
+    <div class="about">
+        <p>
+            <strong>Nirman English Classes</strong> is dedicated to providing high-quality English education
+            for school students, competitive exams, and spoken English learners.
+            Our mission is to make English easy, practical, and confidence-boosting for everyone.
+        </p>
+        <p>
+            Through our YouTube channel <strong>@nirmanenglish</strong>, we offer free video lessons,
+            notes, and exam-oriented preparation.
+        
+        </p>
+    <div id="splash">
+    <div class="splash-content">
+        <h1 class="glow-text">Nirman English Classes</h1>
+        <p class="typing">WELCOME |LETS GROW TOGETHER</p>
+
+        <div class="loader">
+            <div class="progress"></div>
+        </div>
+
+        <span class="tagline">Learn • Practice • Succeed</span>
+    </div>
+</div>
+</section>
+
+<!-- Advertisement Section -->
+<section id="join">
+    <div class="ad">
+        <h2>🎯 Join Nirman English Classes Today!</h2>
+        <p>Online & Offline Classes Available | Affordable Fees | Expert Guidance</p>
+        <a class="whatsapp-btn" 
+   href="https://wa.me/917909043866?text=Hello%20Sir%2C%20I%20want%20to%20enroll%20in%20Nirman%20English%20Classes"
+   target="_blank">
+   📲 Contact / Enroll on WhatsApp
+</a>
+
+    </div>
+
+    <div class="subscribe-box">
+    <a href="https://www.youtube.com/@nirmanenglish?sub_confirmation=1" 
+       target="_blank" 
+       class="subscribe-btn">
+       🔔 Subscribe My YouTube Channel
+    </a>
+</div>
+</section>
+
+<footer>
+    <p>© 2025 Nirman English Classes | All Rights Reserved</p>
+</footer>
+
+<script>
+    function joinNow() {
+        alert("Contact us on WhatsApp or visit our YouTube channel @nirmanenglish");
+    }
+</script>
+
+
+</body>
+</html>
